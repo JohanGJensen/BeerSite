@@ -7,44 +7,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: auto;
-  background: #3f3f3f;
-}
-
-.link-container-footer {
-  width: auto;
-  height: auto;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  padding: 0;
-}
-
-.link-footer {
-  color: #ffffff;
-  text-decoration: none;
-
-  padding: 20px 0;
-}
-
-.link-footer:hover {
-  color: orange;
-}
-
-.line-footer {
-  display: block;
-  padding: 0 10px;
-}
-
 h1 {
   font-size: 2.5em;
   margin: 0;
@@ -94,24 +56,6 @@ h1 {
   }
 
   .banner-h1 {
-    display: none;
-  }
-
-  footer {
-    flex-direction: column;
-  }
-
-  .link-container-footer {
-    flex-direction: column;
-
-    padding: 10px 0;
-  }
-
-  .link-footer {
-    padding: 5px 0;
-  }
-
-  .line-footer {
     display: none;
   }
 }

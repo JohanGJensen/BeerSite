@@ -29,7 +29,25 @@ const getMimeType = extension => {
   return mimeType;
 };
 
-const getFile = (filePath, response, mimeType) => {
+const getCacheControl = extension => {
+  let cache = 'no-cache';
+
+  switch (extension) {
+    case '.js':
+    case '.json':
+      cache = 'no-cache';
+      break;
+    case '.css':
+    case '.png':
+    case '.jpg':
+      cache = 'public, max-age=3600, must-revalidate';
+      break;
+  }  
+
+  return cache;
+};
+
+const getFile = (filePath, response, mimeType, cache) => {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       if (err.code === 'ENOENT') {
@@ -47,7 +65,8 @@ const getFile = (filePath, response, mimeType) => {
       }
     } else {
       // Success
-      response.writeHead(200, { 'Content-Type': mimeType });
+      // response.writeHead(200, { 'Content-Type': mimeType });
+      response.writeHead(200, { 'Content-Type': mimeType, 'Cache-Control': cache });
       response.end(data, 'utf8');
     }
   })
@@ -63,8 +82,9 @@ const requestHandler = (req, res) => {
 	const ext = path.extname(filePath);
 
   let mimeType = getMimeType(ext);
+  let cache = getCacheControl(ext);
 
-  getFile(filePath,res,mimeType);
+  getFile(filePath,res,mimeType,cache);
 };
 
 const server = http.createServer(requestHandler);

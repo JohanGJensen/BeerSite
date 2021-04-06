@@ -35,7 +35,7 @@ const getFile = (filePath, response, mimeType) => {
       if (err.code === 'ENOENT') {
         // page not found
         fs.readFile(
-          path.join(__dirname, 'website', '404.html'),
+          path.join(__dirname, 'public', '404.html'),
           (err, html) => {
             response.writeHead(404, { 'Content-Type': 'text/html' });
             response.end(html, 'utf8');
@@ -56,7 +56,7 @@ const getFile = (filePath, response, mimeType) => {
 const requestHandler = (req, res) => {
   const filePath = path.join(
     __dirname,
-    'website',
+    'public',
     req.url === '/' ? 'index.html' : req.url
   );
 

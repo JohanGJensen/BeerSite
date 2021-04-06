@@ -1,0 +1,15 @@
+{
+  "name": "beersite",
+  "version": "1.0.0",
+  "description": "A Server side rendered website for my homebrewed beer",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johan Glud Jensen",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

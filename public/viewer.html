@@ -9,6 +9,22 @@
     <title>Beer Viewer: (Genesis)</title>
   </head>
   <body>
+    <section class="main-container">
+      <section class="list-container" id="list-container-id"></section>
+      <section class="viewer-container" id="viewer-container-id">
+        <img src="" alt="beer" class="viewer-image" id="product-image" />
+        <section class="viewer-info-container">
+          <h1 id="product-title">beer</h1>
+          <p id="product-tags">tagline</p>
+        </section>
+      </section>
+    </section>
+
     <script src="js/index.js"></script>
+    <script src="js/API.js"></script>
+    <script>
+      //   mountApiHandlers();
+      initViewer();
+    </script>
   </body>
 </html>

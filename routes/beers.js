@@ -2,13 +2,13 @@ const express = require("express");
 const router = express.Router();
 const db = require("../database/fakeDB");
 
-router.get("/", (req, res) => {
-  res.json({ msg: "Beers works" });
+router.get("/selected", (req, res) => {
+  res.send(db.selected);
 });
 
 router.post("/selected/:id", (req, res) => {
   const id = req.params.id;
-  const item = db.collection.find((item) => id === item["product-id"]);
+  const item = db.collection.find((item) => id === item.productId);
 
   if (item) {
     db.selected = item;

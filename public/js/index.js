@@ -1,12 +1,29 @@
 const container = document.getElementById("articles-parent");
-let apiMounted = false;
+
+let apiMounted = true;
+
+const initViewer = () => {
+  const title = document.getElementById("product-title");
+  const tags = document.getElementById("product-tags");
+  const image = document.getElementById("product-image");
+
+  if (apiMounted && typeof doGetSelectedBeer === "function") {
+    doGetSelectedBeer()
+      .then((res) => {
+        title.innerText = res.productTitle;
+        tags.innerText = res.productTags;
+        image.src = `../assets/${res.productImage}`;
+      })
+      .catch((err) => console.error(err));
+  }
+};
 
 const getViewPage = (value) => {
   const id = value.getAttribute("id").split("article-")[1];
 
-  if (apiMounted && id) setSelectedBeer(id);
+  if (apiMounted && id) doSetSelectedBeer(id);
 
-  location.href = `${origin}/pages/viewer`;
+  location.href = `${origin}/viewer`;
 };
 
 const mountApiHandlers = () => {
@@ -18,3 +35,5 @@ const mountApiHandlers = () => {
 
   apiMounted = true;
 };
+
+// mountApiHandlers(initViewer);

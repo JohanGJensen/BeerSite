@@ -1,13 +1,13 @@
 const fakeCollection = [
   {
-    "product-id": "1",
-    "product-title": "Genesis",
-    "product-tags": "Tripel - Belgian Style",
-    "product-image": "beer-test-image.png",
+    productId: "1",
+    productTitle: "Genesis",
+    productTags: "Tripel - Belgian Style",
+    productImage: "beer-test-image.png",
   },
 ];
 
-const selected = null;
+const selected = fakeCollection[0];
 
 module.exports = {
   collection: fakeCollection,

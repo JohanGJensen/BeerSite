@@ -60,6 +60,23 @@ const getCacheControl = (extension) => {
   return cache;
 };
 
+const getPageHtml = (url) => {
+  let page = url;
+
+  switch (url) {
+    case "/":
+    case "/index":
+      page = "/index.html";
+      break;
+    case "/viewer":
+      page = "/viewer.html";
+      break;
+  }
+
+  console.log(page);
+  return page;
+};
+
 const getFile = (filePath, response, mimeType, cache) => {
   fs.readFile(filePath, (err, data) => {
     if (err) {
@@ -90,11 +107,7 @@ app.use("/pages", pagesRoute);
 
 // app.use(express.static("public"));
 app.use("/", (req, res) => {
-  const filePath = path.join(
-    __dirname,
-    "public",
-    req.url === "/" ? "index.html" : req.url
-  );
+  const filePath = path.join(__dirname, "public", getPageHtml(req.url));
 
   const ext = path.extname(filePath);
 

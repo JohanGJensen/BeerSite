@@ -1,0 +1,35 @@
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.list-container {
+  width: 250px;
+  height: 100vh;
+
+  background-color: #2f2f2f;
+}
+
+.viewer-container {
+  position: relative;
+  width: calc(100% - 250px);
+  height: 100vh;
+}
+
+.viewer-image {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  top: calc(((100vh / 2) - 100px) - 350px);
+  left: calc((100% / 2) - 350px);
+}
+
+.viewer-info-container {
+  width: 100%;
+  height: 200px;
+
+  background-color: #f6b468;
+  position: absolute;
+  bottom: 0;
+}

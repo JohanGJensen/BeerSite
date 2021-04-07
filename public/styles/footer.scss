@@ -25,10 +25,13 @@ footer {
   text-decoration: none;
 
   padding: 20px 0;
-}
 
-.link-footer:hover {
-  color: orange;
+  &:hover,
+  &:active {
+    color: #f6b468;
+
+    transition: color ease 0.2s;
+  }
 }
 
 .line-footer {

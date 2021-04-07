@@ -4,7 +4,8 @@
   "description": "A Server side rendered website for my homebrewed beer",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "start": "server.js",
+    "dev": "nodemon server.js",
     "sass": "sass --watch public/styles/style.scss public/styles/style.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +13,10 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
     "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }

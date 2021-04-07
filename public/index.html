@@ -1,65 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/beer-icon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/assets/beer-icon.png" />
     <link rel="stylesheet" href="/styles/style.css" type="text/css" />
     <title>Homebrew - Johan Glud Jensen</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="banner-content">
-        <h1 class="banner-h1">Homebrew</h1>
-        <!-- <img class="banner-img" src="/assets/beer-banner.jpg" alt="beer banner" /> -->
+      <h1 class="banner-h1">Homebrew</h1>
+      <!-- <img class="banner-img" src="/assets/beer-banner.jpg" alt="beer banner" /> -->
     </section>
     <section class="beers-content">
-        <h1 class="beers-h1">The Beers</h1>
-        <div class="beers-container">
-            <article class="beer-article" onclick="getPage()">
-                <h6 class="beers-h6">Genesis</h6>
-                <img src="assets/beer-test-image.png" alt="beer" class="beer-image">
-                <div class="beers-p-container">
-                    <p class="beers-p">Tripel - Belgian style</p>
-                </div>
-            </article>
-
-            <!-- <article class="beer-article">
-                <h6 class="beers-h6">Genesis 2</h6>
-                <img src="assets/beer-test-image.png" alt="beer" class="beer-image">
-                <div class="beers-p-container">
-                    <p class="beers-p">Tripel - Belgian style</p>
-                </div>
-            </article>
-
-            <article class="beer-article">
-                <h6 class="beers-h6">Genesis 3</h6>
-                <img src="assets/beer-test-image.png" alt="beer" class="beer-image">
-                <div class="beers-p-container">
-                    <p class="beers-p">Tripel - Belgian style</p>
-                </div>
-            </article>
-
-            <article class="beer-article">
-                <h6 class="beers-h6">Genesis 4</h6>
-                <img src="assets/beer-test-image.png" alt="beer" class="beer-image">
-                <div class="beers-p-container">
-                    <p class="beers-p">Tripel - Belgian style</p>
-                </div>
-            </article> -->
-        </div>
+      <h1 class="beers-h1">The Beers</h1>
+      <div id="articles-parent" class="beers-container">
+        <article
+          id="article-1"
+          class="beer-article"
+          onclick="getViewPage(this)"
+        >
+          <h6 class="beers-h6">Genesis</h6>
+          <img src="assets/beer-test-image.png" alt="beer" class="beer-image" />
+          <div class="beers-p-container">
+            <p class="beers-p">Tripel - Belgian style</p>
+          </div>
+        </article>
+      </div>
     </section>
     <section class="about-content">
-        <h1 class="about-h1">About</h1>
-        <p class="about-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem natus accusamus sit reiciendis assumenda magni culpa, ut quae illo officiis ad quos ipsam fuga. Voluptas vel iste provident. Enim nobis vitae assumenda aliquam rem ut veniam quod debitis sit ea culpa eaque earum porro, doloribus cumque provident? Consectetur, exercitationem adipisci.</p>
+      <h1 class="about-h1">About</h1>
+      <p class="about-p">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem natus
+        accusamus sit reiciendis assumenda magni culpa, ut quae illo officiis ad
+        quos ipsam fuga. Voluptas vel iste provident. Enim nobis vitae assumenda
+        aliquam rem ut veniam quod debitis sit ea culpa eaque earum porro,
+        doloribus cumque provident? Consectetur, exercitationem adipisci.
+      </p>
     </section>
     <footer>
-        <section class="link-container-footer">
-            <a class="link-footer" href="#">Linkedin</a>
-            <p class="line-footer">-</p>
-            <a class="link-footer" href="#">Github</a>
-        </section>
+      <section class="link-container-footer">
+        <a class="link-footer" href="#">Linkedin</a>
+        <p class="line-footer">-</p>
+        <a class="link-footer" href="#">Github</a>
+      </section>
     </footer>
-</body>
-<script src="js/index.js"></script>
+  </body>
+  <script src="js/index.js"></script>
+  <script>
+    mountApiHandlers();
+  </script>
 </html>

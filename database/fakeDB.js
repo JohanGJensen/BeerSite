@@ -1,9 +1,17 @@
 const fakeCollection = [
   {
-    productId: "1",
-    productTitle: "Genesis",
-    productTags: "Tripel - Belgian Style",
-    productImage: "beer-test-image.png",
+    id: "1",
+    title: "Genesis",
+    tags: "Tripel - Belgian Style",
+    image: "beer-test-image.png",
+    apv: "7.9%",
+    ingredients: ["malt", "hops", "water", "yeast"],
+    smells: ["floral", "fruity"],
+    tastes: ["caramel", "yeasty"],
+    color: {
+      label: "Amber Golden",
+      hexValues: ["#f6c101", "#df8d03", "#c96e12"],
+    },
   },
 ];
 

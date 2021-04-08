@@ -8,7 +8,7 @@ router.get("/selected", (req, res) => {
 
 router.post("/selected/:id", (req, res) => {
   const id = req.params.id;
-  const item = db.collection.find((item) => id === item.productId);
+  const item = db.collection.find((item) => id === item.id);
 
   if (item) {
     db.selected = item;

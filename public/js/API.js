@@ -49,7 +49,7 @@ const doGetImage = async (image) => {
     })
     .catch((err) => console.error(err));
 
-  return await new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     reader.readAsDataURL(blob);
     reader.onloadend = () => {
       if (reader.readyState === 2) {

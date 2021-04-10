@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const express = require("express");
 const router = express.Router();
-const db = require("../database/fakeDB");
 // utilities
 const util = require("../utilities/index");
 

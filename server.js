@@ -10,7 +10,7 @@ const filesRoute = require("./routes/files");
 // utilities
 const util = require("./utilities/index");
 
-const hostname = process.env.YOUR_HOST || "127.0.0.1";
+const hostname = "0.0.0.0" || "127.0.0.1";
 const port = process.env.PORT || 3000;
 
 app.use(

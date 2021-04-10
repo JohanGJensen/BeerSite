@@ -4,13 +4,22 @@
 
 @use 'viewer';
 
+@font-face {
+  font-family: Nunito-Regular;
+  src: url("../assets/fonts/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: Nunito-Bold;
+  src: url("../assets/fonts/Nunito-Bold.ttf");
+}
+
 body {
   padding: 0;
   margin: 0;
   color: #ffffff;
   background-color: #faf5ef;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Nunito-Regular, sans-serif;
 }
 
 p {
@@ -23,6 +32,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Nunito-Bold, sans-serif;
   margin: 0;
 }
 

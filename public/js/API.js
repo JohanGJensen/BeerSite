@@ -10,7 +10,7 @@ const doGetSelectedBeer = async () => {
   const url = `${origin}/beer/selected`;
   const xml = new XMLHttpRequest();
 
-  return await new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     xml.onload = () => {
       if (xml.readyState === 4) {
         return resolve(xml);
@@ -22,4 +22,19 @@ const doGetSelectedBeer = async () => {
   }).then((req) => {
     return JSON.parse(req.response);
   });
+};
+
+const doGetAllBeers = async () => {
+  const url = `${origin}/beer/all`;
+
+  const response = await fetch(url, { method: "GET" })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => console.error(err));
+
+  return response;
 };

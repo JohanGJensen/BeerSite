@@ -1,6 +1,7 @@
 .beers-content {
   width: 100%;
   height: auto;
+  min-height: 430px;
 }
 
 .beers-p {
@@ -112,16 +113,16 @@
 .about-h1 {
   width: 100%;
   text-align: center;
-  padding: 20px 0 0;
+  padding: 20px 0;
 }
 
 .about-p {
   width: 50%;
   height: auto;
-  text-align: center;
+  text-align: left;
   line-height: 1.5;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 0 0 30px 0;
 }
 
 @media screen and (max-width: 600px) {
@@ -188,7 +189,7 @@ footer {
 }
 
 .list-container {
-  display: block;
+  display: none;
   width: 250px;
   height: 100vh;
   background-color: #2f2f2f;
@@ -218,11 +219,11 @@ footer {
   bottom: 0;
 }
 
-#product-title {
+.product-title {
   padding: 5px 0 0 5px;
 }
 
-#product-tags {
+.product-tags {
   padding: 0 0 0 5px;
   margin: 0 0 20px 0;
 }
@@ -239,17 +240,17 @@ footer {
   height: 100%;
 }
 .viewer-specs-left p,
-.viewer-specs-left #color-container,
+.viewer-specs-left .color-container,
 .viewer-specs-right p,
-.viewer-specs-right #color-container {
+.viewer-specs-right .color-container {
   padding: 0 0 0 5px;
 }
 
-#color-container {
+.color-container {
   display: flex;
   width: 100%;
 }
-#color-container .color-box {
+.color-container .color-box {
   width: 30px;
   height: 30px;
   margin: 0 5px 0 0;
@@ -293,12 +294,20 @@ footer {
     margin: 5% auto 0 auto;
   }
 }
+@font-face {
+  font-family: Nunito-Regular;
+  src: url("../assets/fonts/Nunito-Regular.ttf");
+}
+@font-face {
+  font-family: Nunito-Bold;
+  src: url("../assets/fonts/Nunito-Bold.ttf");
+}
 body {
   padding: 0;
   margin: 0;
   color: #ffffff;
   background-color: #faf5ef;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Nunito-Regular, sans-serif;
 }
 
 p {
@@ -311,6 +320,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: Nunito-Bold, sans-serif;
   margin: 0;
 }
 

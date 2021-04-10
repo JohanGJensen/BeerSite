@@ -5,7 +5,7 @@
 }
 
 .list-container {
-  display: block;
+  display: none;
   width: 250px;
   height: 100vh;
 
@@ -38,11 +38,11 @@
   bottom: 0;
 }
 
-#product-title {
+.product-title {
   padding: 5px 0 0 5px;
 }
 
-#product-tags {
+.product-tags {
   padding: 0 0 0 5px;
   margin: 0 0 20px 0;
 }
@@ -67,12 +67,12 @@
   height: 100%;
 
   & p,
-  #color-container {
+  .color-container {
     padding: 0 0 0 5px;
   }
 }
 
-#color-container {
+.color-container {
   display: flex;
   width: 100%;
 

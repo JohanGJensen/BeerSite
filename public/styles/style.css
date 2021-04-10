@@ -183,9 +183,9 @@ footer {
   }
 }
 .main-container {
+  display: flex;
   width: 100%;
   height: 100vh;
-  display: flex;
 }
 
 .list-container {
@@ -206,14 +206,11 @@ footer {
 .viewer-image {
   width: 700px;
   height: 700px;
-  top: calc(((100vh / 2) - 100px) - 350px);
-  left: calc((100% / 2) - 350px);
   margin: 20px 0 0;
 }
 
 .viewer-info-container {
   width: 700px;
-  max-width: auto;
   height: auto;
   color: #2f2f2f;
   background-color: #f9e4cc;

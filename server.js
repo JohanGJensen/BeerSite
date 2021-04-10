@@ -6,8 +6,9 @@ const app = express();
 // routes
 const beersRoute = require("./routes/beers");
 const pagesRoute = require("./routes/pages");
-// database (fake)
-const db = require("./database/fakeDB");
+const filesRoute = require("./routes/files");
+// utilities
+const util = require("./utilities/index");
 
 const hostname = process.env.URL || "127.0.0.1";
 const port = process.env.PORT || 3000;
@@ -18,66 +19,7 @@ app.use(
   })
 );
 
-const getMimeType = (extension) => {
-  let mimeType = "text/html";
-
-  switch (extension) {
-    case ".js":
-      mimeType = "text/javascript";
-      break;
-    case ".css":
-      mimeType = "text/css";
-      break;
-    case ".json":
-      mimeType = "application/json";
-      break;
-    case ".png":
-      mimeType = "image/png";
-      break;
-    case ".jpg":
-      mimeType = "image/jpg";
-      break;
-  }
-
-  return mimeType;
-};
-
-const getCacheControl = (extension) => {
-  let cache = "no-cache";
-
-  switch (extension) {
-    case ".js":
-    case ".json":
-      cache = "no-cache";
-      break;
-    case ".css":
-    case ".png":
-    case ".jpg":
-      cache = "public, max-age=3600, must-revalidate";
-      break;
-  }
-
-  return cache;
-};
-
-const getPageHtml = (url) => {
-  let page = url;
-
-  switch (url) {
-    case "/":
-    case "/index":
-      page = "/index.html";
-      break;
-    case "/viewer":
-      page = "/viewer.html";
-      break;
-  }
-
-  console.log(page);
-  return page;
-};
-
-const getFile = (filePath, response, mimeType, cache) => {
+const getFile = (filePath, response, extension) => {
   fs.readFile(filePath, (err, data) => {
     if (err) {
       if (err.code === "ENOENT") {
@@ -94,8 +36,8 @@ const getFile = (filePath, response, mimeType, cache) => {
     } else {
       // Success
       response.writeHead(200, {
-        "Content-Type": mimeType,
-        "Cache-Control": cache,
+        "Content-Type": util.getMimeType(extension),
+        "Cache-Control": util.getCacheControl(extension),
       });
       response.end(data, "utf8");
     }
@@ -104,17 +46,15 @@ const getFile = (filePath, response, mimeType, cache) => {
 
 app.use("/beer", beersRoute);
 app.use("/pages", pagesRoute);
+app.use("/files", filesRoute);
 
 // app.use(express.static("public"));
 app.use("/", (req, res) => {
-  const filePath = path.join(__dirname, "public", getPageHtml(req.url));
+  const filePath = path.join(__dirname, "public", util.getPageHtml(req.url));
 
   const ext = path.extname(filePath);
 
-  let mimeType = getMimeType(ext);
-  let cache = getCacheControl(ext);
-
-  getFile(filePath, res, mimeType, cache);
+  getFile(filePath, res, ext);
 });
 
 app.listen(port, hostname, () => {

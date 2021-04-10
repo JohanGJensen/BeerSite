@@ -107,7 +107,7 @@
   width: 100%;
   height: auto;
   min-height: 300px;
-  background: #5f5f5f;
+  background: #f9e4cc;
 }
 
 .about-h1 {
@@ -220,6 +220,14 @@ footer {
   color: #2f2f2f;
   font-size: 26px;
 }
+.back-button:hover {
+  background-color: #f6b468;
+  transition: background ease 0.2s;
+}
+.back-button:hover p {
+  color: #f6b468;
+  transition: color ease 0.2s;
+}
 
 .viewer-image {
   width: 700px;
@@ -324,8 +332,8 @@ footer {
 body {
   padding: 0;
   margin: 0;
-  color: #ffffff;
-  background-color: #ffffff;
+  color: #2f2f2f;
+  background-color: #faf5ef;
   font-family: Nunito-Regular, sans-serif;
 }
 
@@ -359,15 +367,16 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/assets/beer-banner.jpg");
+  background: url("/assets/images/beer-banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-bottom: #f6b468 1px solid;
+  border-bottom: #f9e4cc 1px solid;
 }
 
 .banner-h1 {
   display: block;
+  color: #ffffff;
 }
 
 .banner-img {

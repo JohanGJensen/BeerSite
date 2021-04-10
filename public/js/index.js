@@ -48,7 +48,7 @@ const applyResponse = (res) => {
   document.title = `Beer Viewer: (${res.title})`;
   title.innerText = res.title;
   tags.innerText = res.tags;
-  image.src = `../assets/${res.image}`;
+  image.src = `../assets/images/${res.image}`;
   apv.innerText = res.apv;
 
   setInnerTextWithArray(ingredients, res.ingredients);
@@ -157,7 +157,7 @@ const buildArticles = async () => {
     const image = createClassedElement("img", "beer-image");
 
     image.alt = "beer";
-    image.src = "../assets/" + item.image;
+    image.src = await doGetImage(item.image);
 
     article.id = `article-${item.id}`;
     article.onclick = () => getViewPage(article);

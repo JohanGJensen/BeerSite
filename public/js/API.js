@@ -38,3 +38,23 @@ const doGetAllBeers = async () => {
 
   return response;
 };
+
+const doGetImage = async (image) => {
+  const url = `${origin}/files/images/${image}`;
+  const reader = new FileReader();
+
+  const blob = await fetch(url, { method: "GET" })
+    .then((res) => {
+      return res.blob();
+    })
+    .catch((err) => console.error(err));
+
+  return await new Promise((resolve, reject) => {
+    reader.readAsDataURL(blob);
+    reader.onloadend = () => {
+      if (reader.readyState === 2) {
+        return resolve(reader.result);
+      }
+    };
+  });
+};

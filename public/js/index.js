@@ -18,6 +18,10 @@ const getViewPage = (value) => {
   location.href = `${origin}/viewer`;
 };
 
+const goBack = () => {
+  location.href = origin;
+};
+
 const mountApiHandlers = () => {
   const body = document.getElementsByTagName("body");
   const script = document.createElement("script");

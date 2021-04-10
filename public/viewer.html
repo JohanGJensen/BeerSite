@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/assets/beer-icon.png" />
     <link rel="stylesheet" href="/styles/style.css" type="text/css" />
-    <title>Beer Viewer: (Genesis)</title>
+    <title>Beer Viewer: (beer)</title>
   </head>
   <body>
     <section class="main-container">
@@ -14,19 +14,39 @@
       <section class="viewer-container" id="viewer-container-id">
         <img src="" alt="beer" class="viewer-image" id="product-image" />
         <section class="viewer-info-container">
-          <h1 class="product-title">beer</h1>
-          <h4 class="product-tags">tagline</h4>
+          <div class="key-value-container">
+            <h1 class="product-key">Name:</h1>
+            <h1 class="product-title">beer</h1>
+          </div>
+          <div class="key-value-container">
+            <h4 class="product-tags">tagline</h4>
+          </div>
 
           <div class="viewer-specs-container">
-            <div class="viewer-specs-left">
-              <p class="product-apv">APV: 0.0%</p>
-              <p class="product-ingredients">malt - hops - water - yeast</p>
-              <p class="product-smells">floral - fruity</p>
+            <div class="viewer-specs-line">
+              <div class="key-value-container margin-right">
+                <p class="product-key">Smell:</p>
+                <p class="product-smells">floral - fruity</p>
+              </div>
+              <div class="key-value-container margin-right">
+                <p class="product-key">Taste:</p>
+                <p class="product-tastes">caramel - yeasty</p>
+              </div>
+              <div class="key-value-container">
+                <p class="product-key">Color:</p>
+                <div class="color-container">
+                  <div class="color-box" style="background: #f6c101"></div>
+                </div>
+              </div>
             </div>
-            <div class="viewer-specs-right">
-              <p class="product-tastes">caramel - yeasty</p>
-              <div class="color-container">
-                <div class="color-box" style="background: #f6c101"></div>
+            <div class="viewer-specs-line">
+              <div class="key-value-container margin-right">
+                <p class="product-key">APV:</p>
+                <p class="product-apv">0.0%</p>
+              </div>
+              <div class="key-value-container">
+                <p class="product-key">Ingredients:</p>
+                <p class="product-ingredients">malt - hops - water - yeast</p>
               </div>
             </div>
           </div>

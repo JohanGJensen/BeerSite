@@ -41,10 +41,11 @@ const applyResponse = (res) => {
   // clear colors
   color.innerHTML = "";
 
+  document.title = `Beer Viewer: (${res.title})`;
   title.innerText = res.title;
   tags.innerText = res.tags;
   image.src = `../assets/${res.image}`;
-  apv.innerText = "APV: " + res.apv;
+  apv.innerText = res.apv;
 
   setInnerTextWithArray(ingredients, res.ingredients);
   setInnerTextWithArray(smells, res.smells);

@@ -13,7 +13,9 @@
 }
 
 .viewer-container {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100vh;
 }
@@ -21,25 +23,35 @@
 .viewer-image {
   width: 700px;
   height: 700px;
-  position: absolute;
   top: calc(((100vh / 2) - 100px) - 350px);
   left: calc((100% / 2) - 350px);
 
-  margin: 0;
+  margin: 20px 0 0;
 }
 
 .viewer-info-container {
-  width: 100%;
-  height: 200px;
+  width: 700px;
+  max-width: auto;
+  height: auto;
 
   color: #2f2f2f;
-  background-color: #f6b468;
-  position: absolute;
-  bottom: 0;
+  background-color: #f9e4cc;
+
+  margin: 0 auto;
+}
+
+.key-value-container {
+  display: flex;
+  justify-content: center;
+}
+
+.product-key {
+  color: #b17519;
+  padding: 0 5px 0 0;
 }
 
 .product-title {
-  padding: 5px 0 0 5px;
+  // padding: 10px 0 0 0;
 }
 
 .product-tags {
@@ -49,39 +61,28 @@
 
 .viewer-specs-container {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   height: auto;
 }
 
-// .viewer-specs-left {
-//   width: 50%;
-// }
-
-// .viewer-specs-right {
-//   width: auto;
-// }
-
-.viewer-specs-left,
-.viewer-specs-right {
-  width: calc(50% - 5px);
-  height: 100%;
-
-  & p,
-  .color-container {
-    padding: 0 0 0 5px;
-  }
+.viewer-specs-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 10px 0;
 }
 
 .color-container {
   display: flex;
-  width: 100%;
 
   & .color-box {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
 
     margin: 0 5px 0 0;
-    border: #2f2f2f solid 1px;
   }
 }
 
@@ -89,37 +90,42 @@
   .list-container {
     display: none;
   }
+}
 
-  .viewer-image {
-    left: calc((100% / 2) - 350px);
+@media screen and (max-width: 700px) {
+  .viewer-container {
+    align-items: flex-end;
+
+    & h1 {
+      font-size: 1.8em;
+    }
+
+    & h4 {
+      font-size: 0.9em;
+    }
   }
 
   .viewer-info-container {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .viewer-info-container {
     height: 350px;
-  }
 
-  .viewer-specs-container {
-    flex-direction: column;
-
-    & .viewer-specs-left,
-    .viewer-specs-right {
-      width: calc(100% - 5px);
+    & p {
+      font-size: 0.9em;
     }
-    & .viewer-specs-left {
-      margin: 0 0 10px 0;
+    & .margin-right {
+      margin: 0;
+    }
+
+    & .viewer-specs-line {
+      flex-direction: column;
     }
   }
 
   .viewer-image {
     position: static;
     width: 96%;
-    height: auto;
+    height: 100vh;
+    // height: auto;
     object-fit: contain;
 
     margin: 5% auto 0 auto;

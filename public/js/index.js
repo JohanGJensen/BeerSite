@@ -32,14 +32,14 @@ const mountApiHandlers = () => {
   apiMounted = true;
 };
 
-const setViewerComponentValues = (res) => {
+const setViewerComponentValues = async (res) => {
   document.title = `Beer Viewer: (${res.title})`;
 
   setInnerTextWithString(".product-title", res.title);
   setInnerTextWithString(".product-tags", res.tags);
   setInnerTextWithString(".product-apv", res.apv);
 
-  setImageWithSrc(".viewer-image", `../assets/images/${res.image}`);
+  setImageWithSrc(".viewer-image", await doGetImage(res.image));
 
   setInnerTextWithArray(".product-ingredients", res.ingredients);
   setInnerTextWithArray(".product-smells", res.smells);
@@ -56,7 +56,6 @@ const setInnerTextWithString = (id, res) => {
 
 const setImageWithSrc = (id, src) => {
   const image = document.querySelector(id);
-
   image.src = src;
 };
 

@@ -37,6 +37,11 @@
   & p {
     color: #2f2f2f;
     font-size: 26px;
+
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
   }
 
   &:hover {

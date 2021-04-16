@@ -1,0 +1,19 @@
+{
+  "name": "beersite-project",
+  "version": "1.0.0",
+  "description": "A project of micro services for beer site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohanGJensen/BeerSite.git"
+  },
+  "author": "Johan Glud Jensen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JohanGJensen/BeerSite/issues"
+  },
+  "homepage": "https://github.com/JohanGJensen/BeerSite#readme"
+}

@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  server:
+    command: "npm run dev"
+    build: ./server
+    ports:
+      - "3000:3000"
+    volumes:
+      - /beersite
+      - ./public:/beersite/public
+
+  # public:
+  #   build:
+  #     context: "public"

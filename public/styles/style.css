@@ -154,7 +154,8 @@ footer {
   text-decoration: none;
   padding: 20px 0;
 }
-.link-footer:hover, .link-footer:active {
+.link-footer:hover,
+.link-footer:active {
   color: #f6b468;
   transition: color ease 0.2s;
 }
@@ -367,7 +368,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/assets/images/beer-banner.jpg");
+  background: url("../assets/images/beer-banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

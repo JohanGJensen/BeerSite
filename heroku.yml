@@ -3,3 +3,6 @@ build:
     web: server/dockerfile
 run:
   web: bundle exec puma -C config/puma.rb
+  worker:
+    command:
+      - npm run start

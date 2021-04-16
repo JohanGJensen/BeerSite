@@ -1,9 +1,5 @@
 build:
   docker:
-    web: server/dockerfile
+    web: ./server/Dockerfile
 run:
   web: bundle exec puma -C config/puma.rb
-  worker:
-    command:
-      - npm run start
-    image: web

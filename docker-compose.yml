@@ -1,9 +1,11 @@
 version: "3.3"
 
+# TODO: seperate containers properly so that each are considered a micro service
+
 services:
   server:
     command: "npm run dev"
-    # image: johangludjensen/beersite_server:latest
+    # image: registry.heroku.com/beer-site-container/web:latest
     build: ./server
     ports:
       - "3000:3000"

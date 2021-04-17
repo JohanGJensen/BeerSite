@@ -1,0 +1,19 @@
+{
+  "name": "beersite_public",
+  "version": "1.0.0",
+  "description": "the frontend of the beersite application",
+  "main": "index.html",
+  "scripts": {
+    "start": "browser-sync start --server --port 5000 --files 'styles/*.css'",
+    "sass": "sass --watch styles/style.scss styles/style.css",
+    "dev": "concurrently \"npm run sass\" \"npm run start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Johan Glud Jensen",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "concurrently": "^6.0.2",
+    "sass": "^1.32.10"
+  }
+}

@@ -5,12 +5,12 @@
 @use 'viewer';
 
 @font-face {
-  font-family: Nunito-Regular;
-  src: url("../assets/fonts/Nunito-Regular.ttf");
+  font-family: Overpass-Regular;
+  src: url("../assets/fonts/Overpass-Regular.ttf");
 }
 @font-face {
-  font-family: Nunito-Bold;
-  src: url("../assets/fonts/Nunito-Bold.ttf");
+  font-family: Overpass-Bold;
+  src: url("../assets/fonts/Overpass-Bold.ttf");
 }
 
 body {
@@ -19,7 +19,7 @@ body {
   color: #2f2f2f;
   background-color: #faf5ef;
 
-  font-family: Nunito-Regular, sans-serif;
+  font-family: Overpass-Regular, sans-serif;
 }
 
 p {
@@ -33,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Nunito-Bold, sans-serif;
+  font-family: Overpass-Bold, sans-serif;
   margin: 0;
 }
 
@@ -80,10 +80,13 @@ h6 {
 
 @media screen and (max-width: 600px) {
   .banner-content {
-    height: 100vh;
+    height: 30vh;
+    // display: none;
+    // background: url("../assets/images/beer01.jpg");
+    // background-position: center;
   }
 
-  .banner-h1 {
-    display: none;
-  }
+  // .banner-h1 {
+  // display: none;
+  // }
 }

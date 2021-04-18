@@ -3,21 +3,12 @@ const path = require("path");
 // express library - routing
 const express = require("express");
 const app = express();
-// routes
-const beersRoute = require("./routes/beers");
-const pagesRoute = require("./routes/pages");
-const filesRoute = require("./routes/files");
+
 // utilities
 const util = require("./utilities/index");
 
-const hostname = "0.0.0.0" || "127.0.0.1";
+const hostname = process.env.HOST_URL || "0.0.0.0";
 const port = process.env.PORT || 3000;
-
-app.use(
-  express.urlencoded({
-    extended: false,
-  })
-);
 
 const getFile = (filePath, response, extension) => {
   fs.readFile(filePath, (err, data) => {
@@ -43,10 +34,6 @@ const getFile = (filePath, response, extension) => {
     }
   });
 };
-
-app.use("/beer", beersRoute);
-app.use("/pages", pagesRoute);
-app.use("/files", filesRoute);
 
 // app.use(express.static("public"));
 app.use("/", (req, res) => {

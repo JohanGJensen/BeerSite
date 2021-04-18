@@ -1,6 +1,4 @@
-version: "3.3"
-
-# TODO: seperate containers properly so that each are considered a micro service
+version: "3"
 
 services:
   server:
@@ -9,12 +7,16 @@ services:
     build: ./server
     ports:
       - "3000:3000"
-    depends_on:
-      - public
+    environment:
+      HOST_URL: ${MY_HOST}
     volumes:
       - ./public:/beersite/public
 
-  public:
-    build: ./public
-    ports:
-      - "5000:5000"
+  # public:
+  #   build: ./public
+  #   ports:
+  #     - "5000:5000"
+  #   depends_on:
+  #     - server
+  #   environment:
+  #     HOST_URL: ${MY_HOST}

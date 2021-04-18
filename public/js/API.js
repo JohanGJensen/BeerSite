@@ -1,5 +1,7 @@
+const apiURL = "http://0.0.0.0:7000";
+
 const doSetSelectedBeer = (id) => {
-  const url = `${origin}/beer/selected/${id}`;
+  const url = `${apiURL}/beer/selected/${id}`;
   const xml = new XMLHttpRequest();
 
   xml.open("POST", url);
@@ -7,7 +9,7 @@ const doSetSelectedBeer = (id) => {
 };
 
 const doGetSelectedBeer = async () => {
-  const url = `${origin}/beer/selected`;
+  const url = `${apiURL}/beer/selected`;
   const xml = new XMLHttpRequest();
 
   return new Promise((resolve, reject) => {
@@ -25,9 +27,9 @@ const doGetSelectedBeer = async () => {
 };
 
 const doGetAllBeers = async () => {
-  const url = `${origin}/beer/all`;
+  const url = `${apiURL}/beer/all`;
 
-  const response = await fetch(url, { method: "GET" })
+  const response = await fetch(url, { method: "GET", mode: "cors" })
     .then((res) => {
       return res.json();
     })
@@ -40,10 +42,10 @@ const doGetAllBeers = async () => {
 };
 
 const doGetImage = async (image) => {
-  const url = `${origin}/files/images/${image}`;
+  const url = `${apiURL}/files/images/${image}`;
   const reader = new FileReader();
 
-  const blob = await fetch(url, { method: "GET" })
+  const blob = await fetch(url, { method: "GET", mode: "cors" })
     .then((res) => {
       return res.blob();
     })

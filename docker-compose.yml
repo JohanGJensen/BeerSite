@@ -7,16 +7,17 @@ services:
     build: ./server
     ports:
       - "3000:3000"
+    depends_on:
+      - api
     environment:
       HOST_URL: ${MY_HOST}
     volumes:
       - ./public:/beersite/public
 
-  # public:
-  #   build: ./public
-  #   ports:
-  #     - "5000:5000"
-  #   depends_on:
-  #     - server
-  #   environment:
-  #     HOST_URL: ${MY_HOST}
+  api:
+    image: registry.heroku.com/beer-site-api/web:latest
+    # build: ./api
+    ports:
+      - "7000:7000"
+    environment:
+      HOST_URL: ${MY_HOST}

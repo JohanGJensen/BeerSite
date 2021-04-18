@@ -1,4 +1,4 @@
-const apiURL = "http://0.0.0.0:7000";
+const apiURL = "https://beer-site-api.herokuapp.com";
 
 const doSetSelectedBeer = (id) => {
   const url = `${apiURL}/beer/selected/${id}`;

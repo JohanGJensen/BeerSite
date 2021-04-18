@@ -8,6 +8,6 @@ COPY . /beersiteAPI
 
 RUN npm install
 
-EXPOSE 3000
+EXPOSE 7000
 
 CMD [ "npm", "run", "start" ]

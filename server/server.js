@@ -35,7 +35,6 @@ const getFile = (filePath, response, extension) => {
   });
 };
 
-// app.use(express.static("public"));
 app.use("/", (req, res) => {
   const filePath = path.join(__dirname, "public", util.getPageHtml(req.url));
 

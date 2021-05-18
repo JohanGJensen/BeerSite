@@ -8,7 +8,7 @@ on:
 
     # Publish `v1.2.3` tags as releases.
     tags:
-      - v*
+      - v* 
       
 env:
   IMAGE_NAME: johangludjensen/beersite_server:latest
@@ -22,8 +22,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: echo values
+        run: echo ${{github.event_name}}
+
       - name: Run tests
-        run: echo ${{github.event_name}} && |
+        run: |
           if [ -f docker-compose.test.yml ]; then
             docker-compose --file docker-compose.test.yml build
             docker-compose --file docker-compose.test.yml run sut

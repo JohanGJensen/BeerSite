@@ -1,3 +1,5 @@
 node_modules
 /scripts/run_deploy_container.sh
 /scripts/run_deploy_api.sh
+
+docker-compose.override.yml

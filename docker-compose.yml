@@ -3,8 +3,8 @@ version: "3"
 services:
   server:
     command: "npm run dev"
-    # image: registry.heroku.com/beer-site-container/web:latest
-    build: ./server
+    image: registry.heroku.com/beer-site-container/web:latest
+    # build: ./server
     ports:
       - "3000:3000"
     environment:

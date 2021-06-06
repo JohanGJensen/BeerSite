@@ -113,11 +113,9 @@ const buildArticles = async () => {
       class="beer-article"
       onclick="getViewPage(this)"
     >
-      <h6 class="beers-h6">${item.title}</h6>
-      <img src="${await doGetImage(
-        item.image
-      )}" alt="beer" class="beer-image" />
-      <div class="beers-p-container">
+    <img src="${await doGetImage(item.image)}" alt="beer" class="beer-image" />
+      <div class="beers-text-container">
+        <h6 class="beers-h6">${item.title}</h6>
         <p class="beers-p">${item.tags}</p>
       </div>
     </article>`;

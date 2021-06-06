@@ -9,56 +9,57 @@
     <title>Beer Viewer: (beer)</title>
   </head>
   <body>
-    <section class="main-container">
-      <section class="list-container" id="list-container-id"></section>
-      <section class="viewer-container" id="viewer-container-id">
-        <div class="back-button" onclick="goBack()"><p>Back</p></div>
-        <img
-          src="/assets/images/beer-icon.png"
-          alt="beer"
-          class="viewer-image"
-          id="product-image"
-        />
-        <section class="viewer-info-container">
-          <div class="key-value-container">
-            <!-- <h1 class="product-key">Name:</h1> -->
-            <h1 class="product-title">beer</h1>
-          </div>
-          <div class="key-value-container">
-            <h4 class="product-tags">tagline</h4>
-          </div>
+    <div class="back-button" onclick="goBack()"><p>Back</p></div>
+    <main class="main-container">
+      <article class="viewer-article" id="viewer-container-id">
+        <section class="viewer-content-container">
+          <img
+            src="/assets/images/beer-icon.png"
+            alt="beer"
+            class="viewer-image"
+            id="product-image"
+          />
+          <section class="viewer-info-container">
+            <div class="key-value-container">
+              <h1 class="product-key">Name:</h1>
+              <h1 class="product-title">beer</h1>
+            </div>
+            <div class="key-value-container">
+              <h4 style="padding-left: 0px" class="product-tags">tagline</h4>
+            </div>
 
-          <div class="viewer-specs-container">
-            <div class="viewer-specs-line">
-              <div class="key-value-container margin-right">
-                <p class="product-key">Smell:</p>
-                <p class="product-smells">floral - fruity</p>
+            <div class="viewer-specs-container">
+              <div class="viewer-specs-line">
+                <div class="key-value-container margin-right">
+                  <p class="product-key">Smell:</p>
+                  <p class="product-smells">floral - fruity</p>
+                </div>
+                <div class="key-value-container margin-right">
+                  <p class="product-key">Taste:</p>
+                  <p class="product-tastes">caramel - yeasty</p>
+                </div>
+                <div class="key-value-container">
+                  <p class="product-key">Color:</p>
+                  <div class="color-container">
+                    <div class="color-box" style="background: #f6c101"></div>
+                  </div>
+                </div>
               </div>
-              <div class="key-value-container margin-right">
-                <p class="product-key">Taste:</p>
-                <p class="product-tastes">caramel - yeasty</p>
-              </div>
-              <div class="key-value-container">
-                <p class="product-key">Color:</p>
-                <div class="color-container">
-                  <div class="color-box" style="background: #f6c101"></div>
+              <div class="viewer-specs-line">
+                <div class="key-value-container margin-right">
+                  <p class="product-key">APV:</p>
+                  <p class="product-apv">0.0%</p>
+                </div>
+                <div class="key-value-container">
+                  <p class="product-key">Ingredients:</p>
+                  <p class="product-ingredients">malt - hops - water - yeast</p>
                 </div>
               </div>
             </div>
-            <div class="viewer-specs-line">
-              <div class="key-value-container margin-right">
-                <p class="product-key">APV:</p>
-                <p class="product-apv">0.0%</p>
-              </div>
-              <div class="key-value-container">
-                <p class="product-key">Ingredients:</p>
-                <p class="product-ingredients">malt - hops - water - yeast</p>
-              </div>
-            </div>
-          </div>
+          </section>
         </section>
-      </section>
-    </section>
+      </article>
+    </main>
 
     <script src="js/index.js"></script>
     <script src="js/API.js"></script>

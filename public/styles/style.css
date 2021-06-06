@@ -192,76 +192,43 @@ footer {
 }
 .main-container {
   display: flex;
-  width: 100%;
-  height: 100vh;
+  width: 1138px;
+  margin: 0 auto;
 }
 
-.list-container {
-  display: none;
-  width: 250px;
-  height: 100vh;
-  background-color: #2f2f2f;
-}
-
-.viewer-container {
+.viewer-article {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.back-button {
-  display: flex;
   justify-content: center;
+  width: 1138px;
+  height: 720px;
+  box-shadow: 0 0 3px 1px rgba(47, 47, 47, 0.3);
+  border-radius: 5px;
+}
+
+.viewer-content-container {
+  display: flex;
   align-items: center;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 100px;
-  height: 50px;
-  background-color: #f9e4cc;
-}
-.back-button p {
-  color: #2f2f2f;
-  font-size: 26px;
-  -webkit-user-select: none;
-  /* Safari */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* IE10+/Edge */
-  user-select: none;
-  /* Standard */
-}
-.back-button:hover {
-  background-color: #f6b468;
-  transition: background ease 0.2s;
-}
-.back-button:hover p {
-  color: #f6b468;
-  transition: color ease 0.2s;
+  height: 600px;
+  max-width: 1138px;
 }
 
 .viewer-image {
-  width: 700px;
-  height: 700px;
-  margin: 20px 0 0;
+  width: 600px;
+  height: 600px;
 }
 
 .viewer-info-container {
   width: 700px;
-  height: auto;
+  height: 600px;
   color: #2f2f2f;
-  background-color: #f9e4cc;
-  margin: 0 auto;
+  margin-right: 58px;
 }
 
 .key-value-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 0 10px 0;
 }
 
 .product-key {
@@ -271,7 +238,6 @@ footer {
 
 .product-tags {
   padding: 0 0 0 5px;
-  margin: 0 0 20px 0;
 }
 
 .viewer-specs-container {
@@ -280,9 +246,6 @@ footer {
   flex-wrap: wrap;
   width: 100%;
   height: auto;
-}
-.viewer-specs-container p {
-  padding: 0 0 0 10px;
 }
 
 .viewer-specs-line {
@@ -302,47 +265,120 @@ footer {
   margin: 0 0 0 5px;
 }
 
-@media screen and (max-width: 900px) {
-  .list-container {
-    display: none;
-  }
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 50px;
+  border: solid 2px #2f2f2f;
+  background-color: #ffffff;
 }
-@media screen and (max-width: 700px) {
-  .viewer-container {
-    align-items: flex-end;
-  }
-  .viewer-container h1 {
-    font-size: 1.8em;
-  }
-  .viewer-container h4 {
-    font-size: 0.9em;
+.back-button p {
+  color: #2f2f2f;
+  font-size: 26px;
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+/Edge */
+  user-select: none;
+  /* Standard */
+}
+.back-button:hover {
+  background-color: #f9e4cc;
+  transition: background ease 0.2s;
+}
+.back-button:hover p {
+  color: #f9e4cc;
+  transition: color ease 0.2s;
+}
+
+@media screen and (min-width: 320px) {
+  .main-container {
+    width: 326px;
   }
 
-  .key-value-container {
-    display: flex;
-    justify-content: center;
+  .viewer-article {
+    width: 326px;
+    height: auto;
+    margin: 100px 0 0 0;
+  }
+
+  .viewer-content-container {
+    flex-direction: column;
+    height: auto;
   }
 
   .viewer-info-container {
     width: 100%;
-    height: 350px;
-  }
-  .viewer-info-container p {
-    font-size: 0.9em;
-  }
-  .viewer-info-container .margin-right {
-    margin: 0;
-  }
-  .viewer-info-container .viewer-specs-line {
-    flex-direction: column;
+    height: auto;
+    margin-right: 0px;
   }
 
   .viewer-image {
-    position: static;
-    width: 96%;
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 732px) {
+  .main-container {
+    display: flex;
+    width: 732px;
+    margin: 0 auto;
+  }
+
+  .viewer-article {
+    width: 732px;
+    margin: 100px 0 80px 0;
+  }
+
+  .viewer-info-container {
+    width: 600px;
+  }
+
+  .viewer-image {
+    width: 600px;
+    height: 600px;
+    margin: 58px 0 15px;
+  }
+}
+@media screen and (min-width: 1138px) {
+  .main-container {
+    align-items: center;
     height: 100vh;
-    object-fit: contain;
-    margin: 5% auto 0 auto;
+    width: 1138px;
+  }
+
+  .viewer-article {
+    width: 1138px;
+    height: 720px;
+    margin: 0;
+  }
+
+  .viewer-content-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .viewer-info-container {
+    width: 700px;
+    height: 600px;
+    margin-right: 58px;
+  }
+
+  .viewer-image {
+    margin-left: 58px;
+  }
+
+  .key-value-container {
+    padding: 0 0 10px 15px;
   }
 }
 @font-face {

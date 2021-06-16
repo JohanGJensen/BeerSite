@@ -68,6 +68,7 @@ h1 {
 
 .beersite-main-container {
   width: $width_desktop;
+  min-height: 100vh;
   margin: 0 auto;
 
   padding-top: 80px;

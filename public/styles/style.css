@@ -40,7 +40,7 @@
   width: 326px;
   height: 375px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #202D2C;
   box-shadow: 0 0 3px 1px rgba(47, 47, 47, 0.3);
 }
 .beer-article:hover {
@@ -84,7 +84,7 @@
 .about-container {
   position: relative;
   height: auto;
-  background: #ffffff;
+  background: #202D2C;
   box-shadow: none;
 }
 
@@ -277,7 +277,7 @@ footer {
   width: 100px;
   height: 50px;
   border: solid 2px #2f2f2f;
-  background-color: #ffffff;
+  background-color: #202D2C;
 }
 .back-button p {
   color: #2f2f2f;
@@ -394,7 +394,7 @@ body {
   padding: 0;
   margin: 0;
   color: #2f2f2f;
-  background-color: #ffffff;
+  background-color: #202D2C;
   font-family: Overpass-Regular, sans-serif;
 }
 

@@ -1,77 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="assets/images/beer-icon.png" />
-    <link rel="stylesheet" href="styles/style.css" type="text/css" />
-    <title>Homebrew - Johan Glud Jensen</title>
-  </head>
-  <body>
-    <nav class="navbar-container">
-      <h1 class="navbar-title">Homebrew</h1>
-    </nav>
-    <main class="beersite-main-container">
-      <section id="articles-parent" class="beers-container articles-container">
-        <article class="beer-article">
-          <div class="beers-shimmer shimmer-big"></div>
-          <div class="beers-shimmer shimmer-small"></div>
-        </article>
-        <article class="beer-article">
-          <div class="beers-shimmer shimmer-big"></div>
-          <div class="beers-shimmer shimmer-small"></div>
-        </article>
-        <article class="beer-article">
-          <div class="beers-shimmer shimmer-big"></div>
-          <div class="beers-shimmer shimmer-small"></div>
-        </article>
-      </section>
-      <section class="about-container articles-container">
-        <!-- <p class="about-p" style="text-align: center">
-          Hello all, welcome to my site!
-        </p> -->
-        <p class="about-p">
-          Hello all, welcome to my site!<br /><br />
-          My name is Johan, and this website is dedicated to my love for
-          homebrewing. Like so many others, the pandemic restrictions made me
-          seek out new past-time activities that could be done from the comforts
-          of my home.<br /><br />
-          I have always had a strong passion for beer, but it was not until
-          recently I actually took a shot at brewing my own! Needless to say I
-          enjoy the process thoroughly, otherwise this website would not
-          exist.<br /><br />
-          This website is in its essence an overview of my home brew. I hope you
-          all will enjoy it, cheers!
-        </p>
-        <!-- <p class="about-p">
-          This website is in its essence an overview of my home brew. I hope you
-          all will enjoy it, cheers!
-        </p> -->
-      </section>
-    </main>
-    <footer>
-      <section class="link-container-footer">
-        <a
-          class="link-footer"
-          target="_blank"
-          href="https://www.linkedin.com/in/johan-glud-jensen-70526313a/"
-          >Linkedin</a
-        >
-        <p class="line-footer">-</p>
-        <a
-          class="link-footer"
-          target="_blank"
-          href="https://github.com/JohanGJensen"
-          >Github</a
-        >
-      </section>
-    </footer>
-  </body>
-  <script src="js/index.js"></script>
-  <script src="js/API.js"></script>
-  <script>
-    // mountApiHandlers();
-    buildArticles();
-  </script>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/images/beer-icon.png" />
+  <link rel="stylesheet" href="styles/style.css" type="text/css" />
+  <title>Homebrew - Johan Glud Jensen</title>
+</head>
+
+<body>
+  <nav class="navbar-container">
+    <ul class="navbar-options">
+      <li class="navbar-option navbar-option-selected">HOME</li>
+      <li class="navbar-option">BEERS</li>
+      <li class="navbar-option">ABOUT</li>
+    </ul>
+  </nav>
+  <main class="beersite-main-container">
+
+  </main>
+</body>
+<script src="js/index.js"></script>
+<script src="js/API.js"></script>
+<script>
+  // mountApiHandlers();
+  buildArticles();
+</script>
+
 </html>

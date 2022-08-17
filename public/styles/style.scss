@@ -98,7 +98,6 @@ h1 {
   display: flex;
 
   width: $width_desktop;
-  min-height: 100vh;
   margin: 80px auto 0;
 }
 
@@ -117,6 +116,29 @@ h1 {
 
 .main-section-beers-link {
   width: 40%;
+
+  .main-section-latest-beer {
+    margin-top: 100px;
+    width: 100%;
+  }
+}
+
+.latest-beer-container {
+  cursor: pointer;
+  background-color: $primary-text-orange;
+  border-radius: 150px;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 120%;
+    background-size: contain;
+  }
 }
 
 .margin-top {

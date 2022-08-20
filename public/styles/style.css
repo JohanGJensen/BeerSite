@@ -416,9 +416,10 @@ p {
 .call-to-action-text {
   cursor: pointer;
   font-size: 1em;
+  border-bottom: 2px solid transparent;
 }
 .call-to-action-text:hover {
-  border-bottom: 2px solid #ECDFC7;
+  border-color: #ECDFC7;
 }
 
 h1,

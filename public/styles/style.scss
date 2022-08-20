@@ -46,10 +46,11 @@ p {
 .call-to-action-text {
   cursor: pointer;
   font-size: 1em;
+  border-bottom: 2px solid transparent;
 
   &:hover {
     // text-decoration: underline;
-    border-bottom: 2px solid $primary-text-white;
+    border-color: $primary-text-white;
   }
 }
 

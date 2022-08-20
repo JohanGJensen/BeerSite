@@ -11,22 +11,47 @@
   font-family: Overpass-Regular;
   src: url("../assets/fonts/Overpass-Regular.ttf");
 }
+
 @font-face {
   font-family: Overpass-Bold;
   src: url("../assets/fonts/Overpass-Bold.ttf");
 }
 
+@font-face {
+  font-family: NeutralFace-Regular;
+  src: url("../assets/fonts/NeutralFace.otf");
+}
+
+@font-face {
+  font-family: NeutralFace-Bold;
+  src: url("../assets/fonts/NeutralFace-Bold.otf");
+}
+
 body {
   padding: 0;
   margin: 0;
-  color: $primary-text-grey;
+  color: $primary-text-white;
   background-color: $background;
+  background-image: url('../assets/images/BACKGROUND\ HOME-100.jpg');
 
-  font-family: Overpass-Regular, sans-serif;
+  font-family: NeutralFace-Regular, sans-serif;
 }
 
 p {
+  font-size: 1.6em;
+  line-height: 1.4em;
   margin: 0;
+}
+
+.call-to-action-text {
+  cursor: pointer;
+  font-size: 1em;
+  border-bottom: 2px solid transparent;
+
+  &:hover {
+    // text-decoration: underline;
+    border-color: $primary-text-white;
+  }
 }
 
 h1,
@@ -44,14 +69,13 @@ h1 {
   line-height: 36px;
 }
 
-// h4,
-// h6 {
-//   font-size: 1.1em;
-// }
+.arrow-small {
+  width: 20px;
+  margin-left: 10px;
+}
 
 .navbar-container {
   width: 100%;
-  height: 55px;
 
   display: flex;
   align-items: center;
@@ -59,47 +83,131 @@ h1 {
   box-shadow: $shadow;
 }
 
-.navbar-title {
-  display: block;
-  color: $primary-text-grey;
+.navbar-options {
+  width: 100%;
+  margin: 1.3em 1.3em 0 0;
+  padding: 0;
 
-  padding-left: 20px;
-}
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 
-.beersite-main-container {
-  width: $width_desktop;
-  min-height: 100vh;
-  margin: 0 auto;
+  list-style: none;
+  font-size: 38px;
 
-  padding-top: 80px;
-}
+  .navbar-option-selected {
+    color: $primary-text-orange
+  }
 
-.margin-right {
-  margin-right: 20px;
-}
+  .navbar-option {
+    margin-left: 1.3em;
+    cursor: pointer;
 
-.articles-container {
-  margin-bottom: 80px;
-  width: 1138px;
-}
-
-@media screen and (min-width: 320px) {
-  .beersite-main-container,
-  .articles-container {
-    width: $width_mobile;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
+.beersite-main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: $width_desktop;
+  margin: 80px auto 0;
+}
+
+.main-section-welcome-information {
+  img {
+    width: 100%;
+    background-size: contain;
+  }
+
+  .main-section-text-content {
+    margin-top: 1em;
+  }
+}
+
+.main-section-beers-link {
+  display: flex;
+  justify-content: flex-end;
+
+  .main-section-latest-beer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 100px;
+  }
+}
+
+.latest-beer-container {
+  cursor: pointer;
+  background-color: $primary-text-orange;
+  border-radius: 150px;
+  width: 220px;
+  height: 220px;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 120%;
+    background-size: contain;
+  }
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+.margin-right {
+  margin-right: 30px;
+}
+
+@media screen and (min-width: 320px) {
+
+  .beersite-main-container {
+    // width: $width_mobile;
+    width: 85%;
+  }
+
+
+}
+
 @media screen and (min-width: 732px) {
-  .beersite-main-container,
-  .articles-container {
+
+  .beersite-main-container {
     width: $width_ipad;
+  }
+
+  .navbar-options {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .main-section-welcome-information {
+    width: 60%;
+  }
+
+  .main-section-beers-link {
+    width: 40%;
   }
 }
 
 @media screen and (min-width: 1138px) {
-  .beersite-main-container,
-  .articles-container {
+
+  .beersite-main-container {
     width: $width_desktop;
+
+    // align-items: center;
+    flex-direction: row;
+  }
+
+  .align-right {
+    text-align: right;
   }
 }

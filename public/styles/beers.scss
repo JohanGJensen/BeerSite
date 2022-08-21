@@ -1,104 +1,104 @@
 @import "mixins/sizing";
 @import "mixins/color";
 
-.beers-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+// .beers-container {
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   flex-wrap: wrap;
 
-  min-height: 375px;
+//   min-height: 375px;
 
-  gap: 80px;
-}
+//   gap: 80px;
+// }
 
-.beers-h6 {
-  color: $primary-text-grey;
-  font-size: 26px;
-  line-height: 26px;
-  text-align: left;
+// .beers-h6 {
+//   color: $primary-text-grey;
+//   font-size: 26px;
+//   line-height: 26px;
+//   text-align: left;
 
-  padding-bottom: 2px;
-}
+//   padding-bottom: 2px;
+// }
 
-.beers-p {
-  font-size: 12px;
-  line-height: 12px;
-  color: $primary-text-orange;
-}
+// .beers-p {
+//   font-size: 12px;
+//   line-height: 12px;
+//   color: $primary-text-orange;
+// }
 
-.beers-text-container {
-  width: 300px;
-  margin-top: 5px;
-}
+// .beers-text-container {
+//   width: 300px;
+//   margin-top: 5px;
+// }
 
-.beer-image {
-  width: 300px;
-  height: 300px;
+// .beer-image {
+//   width: 300px;
+//   height: 300px;
 
-  object-fit: cover;
+//   object-fit: cover;
 
-  margin-top: 15px;
-}
+//   margin-top: 15px;
+// }
 
-.beer-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .beer-article {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
 
-  width: 326px;
-  height: 375px;
-  border-radius: 5px;
+//   width: 326px;
+//   height: 375px;
+//   border-radius: 5px;
 
-  background-color: $background;
-  box-shadow: $shadow;
+//   background-color: $background;
+//   box-shadow: $shadow;
 
-  &:hover {
-    cursor: pointer;
-    background-color: $background-hover;
-    transition: all ease 0.2s;
-  }
-}
+//   &:hover {
+//     cursor: pointer;
+//     background-color: $background-hover;
+//     transition: all ease 0.2s;
+//   }
+// }
 
-.beers-shimmer {
-  width: 90%;
-  height: 90%;
+// .beers-shimmer {
+//   width: 90%;
+//   height: 90%;
 
-  margin: 5% 0 5% 0;
+//   margin: 5% 0 5% 0;
 
-  background: #f6f7f8;
-  background-image: linear-gradient(
-    to right,
-    #f6f7f8 0%,
-    #edeef1 30%,
-    #f6f7f8 70%,
-    #f6f7f8 100%
-  );
-  background-repeat: no-repeat;
+//   background: #f6f7f8;
+//   background-image: linear-gradient(
+//     to right,
+//     #f6f7f8 0%,
+//     #edeef1 30%,
+//     #f6f7f8 70%,
+//     #f6f7f8 100%
+//   );
+//   background-repeat: no-repeat;
 
-  -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: beerArticleShimmer;
-  -webkit-animation-timing-function: linear;
-}
+//   -webkit-animation-duration: 1s;
+//   -webkit-animation-fill-mode: forwards;
+//   -webkit-animation-iteration-count: infinite;
+//   -webkit-animation-name: beerArticleShimmer;
+//   -webkit-animation-timing-function: linear;
+// }
 
-.shimmer-big {
-  width: 90%;
-  height: 55%;
-}
+// .shimmer-big {
+//   width: 90%;
+//   height: 55%;
+// }
 
-.shimmer-small {
-  width: 90%;
-  height: 30%;
-}
+// .shimmer-small {
+//   width: 90%;
+//   height: 30%;
+// }
 
-@-webkit-keyframes beerArticleShimmer {
-  0% {
-    background-position: -500px 0;
-  }
+// @-webkit-keyframes beerArticleShimmer {
+//   0% {
+//     background-position: -500px 0;
+//   }
 
-  100% {
-    background-position: 500px 0;
-  }
-}
+//   100% {
+//     background-position: 500px 0;
+//   }
+// }

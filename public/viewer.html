@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/assets/images/beer-icon.png" />
-    <link rel="stylesheet" href="/styles/style.css" type="text/css" />
-    <title>Beer Viewer: (beer)</title>
-  </head>
-  <body>
-    <div class="back-button" onclick="goBack()"><p>Back</p></div>
-    <main class="main-container">
-      <article class="viewer-article" id="viewer-container-id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/assets/images/beer-icon.png" />
+  <link rel="stylesheet" href="/styles/style.css" type="text/css" />
+  <title>Beer Viewer: (beer)</title>
+</head>
+
+<body>
+  <nav class="navbar-container">
+    <a href="/"><img class="beer-logo" src="assets/images/LOGO.png" alt="beer logo"></a>
+    <ul class="navbar-options">
+      <li><a class="navbar-option" href="/">HOME</a></li>
+      <li><a class="navbar-option navbar-option-selected" href="/viewer">BEERS</a></li>
+      <li><a class="navbar-option" href="/about">ABOUT</a></li>
+    </ul>
+  </nav>
+  <!-- <div class="back-button" onclick="goBack()"><p>Back</p></div> -->
+  <main class="beersite-main-container">
+    <!-- <article class="viewer-article" id="viewer-container-id">
         <section class="viewer-content-container">
           <img
             src="/assets/images/beer-icon.png"
@@ -58,14 +68,15 @@
             </div>
           </section>
         </section>
-      </article>
-    </main>
+      </article> -->
+  </main>
 
-    <script src="js/index.js"></script>
-    <script src="js/API.js"></script>
-    <script>
-      //   mountApiHandlers();
-      initViewer();
-    </script>
-  </body>
+  <script src="js/index.js"></script>
+  <script src="js/API.js"></script>
+  <script>
+    //   mountApiHandlers();
+    initViewer();
+  </script>
+</body>
+
 </html>

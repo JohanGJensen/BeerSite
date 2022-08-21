@@ -60,7 +60,7 @@ footer {
   height: 420px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/PRODUCT DECORATION@2x.png");
+  background-image: url("../assets/images/PRODUCT_DECORATION@2x.png");
   display: flex;
   justify-content: center;
   align-items: center;
@@ -298,7 +298,7 @@ hr {
 }
 @media screen and (min-width: 732px) {
   body {
-    background-image: url("../assets/images/BACKGROUND HOME-100.jpg");
+    background-image: url("../assets/images/BACKGROUND.jpg");
   }
 
   .beer-logo {

@@ -384,6 +384,10 @@ h1 {
   color: #F9673D;
 }
 
+hr {
+  border-color: #ECDFC7;
+}
+
 .beer-logo {
   width: 200px;
   margin: 1.3em 0 0 1.3em;

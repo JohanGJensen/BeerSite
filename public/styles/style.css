@@ -81,64 +81,6 @@
     background-position: 500px 0;
   }
 }
-.about-container {
-  position: relative;
-  height: auto;
-  background: #202D2C;
-  box-shadow: none;
-}
-
-.about-container::after {
-  content: "";
-  background-image: none;
-  background-size: cover;
-  background-position: top;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-}
-
-.about-p {
-  width: 50%;
-  height: auto;
-  text-align: left;
-  font-size: 20px;
-  line-height: 22px;
-  padding: 40px 0 40px 40px;
-}
-
-@media screen and (min-width: 320px) {
-  .about-p {
-    width: 100%;
-    padding: 0px;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 732px) {
-  .about-p {
-    width: 652px;
-    padding: 40px;
-    text-align: left;
-  }
-
-  .about-container {
-    box-shadow: 0 0 3px 1px rgba(47, 47, 47, 0.3);
-  }
-
-  .about-container::after {
-    background-image: url("../assets/images/bottles.jpg");
-  }
-}
-@media screen and (min-width: 1138px) {
-  .about-p {
-    width: 50%;
-    padding: 40px 0 40px 40px;
-    text-align: left;
-  }
-}
 footer {
   display: flex;
   justify-content: center;
@@ -442,6 +384,11 @@ h1 {
   line-height: 36px;
 }
 
+.beer-logo {
+  width: 200px;
+  margin: 1.3em 0 0 1.3em;
+}
+
 .arrow-small {
   width: 20px;
   margin-left: 10px;
@@ -451,6 +398,7 @@ h1 {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   box-shadow: 0 0 3px 1px rgba(47, 47, 47, 0.3);
 }
 
@@ -534,6 +482,10 @@ h1 {
 @media screen and (min-width: 732px) {
   .beersite-main-container {
     width: 732px;
+  }
+
+  .navbar-container {
+    flex-direction: row;
   }
 
   .navbar-options {

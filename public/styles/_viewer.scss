@@ -1,211 +1,76 @@
 @import "mixins/color";
 @import "mixins/sizing";
 
-.main-container {
-  display: flex;
+.beer-image-container {
+  width: auto;
 
-  width: $width_desktop;
-  margin: 0 auto;
-}
-
-.viewer-article {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: $width_desktop;
-  height: 720px;
-  box-shadow: $shadow;
-  border-radius: 5px;
-}
-
-.viewer-content-container {
-  display: flex;
-  align-items: center;
-
-  height: 600px;
-  max-width: $width_desktop;
-}
-
-.viewer-image {
-  width: 600px;
-  height: 600px;
-}
-
-.viewer-info-container {
-  width: 700px;
-  height: 600px;
-
-  color: $primary-text-grey;
-
-  margin-right: 58px;
-}
-
-.key-value-container {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0 0 10px 0;
-}
-
-.product-key {
-  color: #b17519;
-  padding: 0 5px 0 0;
-}
-
-.product-tags {
-  padding: 0 0 0 5px;
-}
-
-.viewer-specs-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 
-  width: 100%;
-  height: auto;
-}
+  .beer-image-wrapper {
+    width: 420px;
+    height: 420px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/images/PRODUCT\ DECORATION@2x.png');
 
-.viewer-specs-line {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  width: 100%;
-  margin: 0 0 10px 0;
-}
-
-.color-container {
-  display: flex;
-
-  & .color-box {
-    width: 20px;
-    height: 20px;
-
-    margin: 0 0 0 5px;
-  }
-}
-
-.back-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 100px;
-  height: 50px;
-
-  border: solid 2px $primary-grey;
-  background-color: $background;
-
-  & p {
-    color: $primary-text-grey;
-    font-size: 26px;
-
-    -webkit-user-select: none; /* Safari */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* IE10+/Edge */
-    user-select: none; /* Standard */
-  }
-
-  &:hover {
-    background-color: $background-hover;
-    transition: background ease 0.2s;
-
-    & p {
-      color: $background-hover;
-      transition: color ease 0.2s;
+    .viewer-image {
+      width: 90%;
+      border-radius: 150px;
     }
   }
 }
 
-@media screen and (min-width: 320px) {
-  .main-container {
-    width: $width_mobile;
-  }
-
-  .viewer-article {
-    width: $width_mobile;
-    height: auto;
-    margin: 100px 0 0 0;
-  }
-
-  .viewer-content-container {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .viewer-info-container {
-    width: 100%;
-    height: auto;
-
-    margin-right: 0px;
-  }
-
-  .viewer-image {
-    width: 100%;
-    height: auto;
-    margin-left: 0px;
-  }
-}
-
-@media screen and (min-width: 732px) {
-  .main-container {
-    display: flex;
-
-    width: $width_ipad;
-    margin: 0 auto;
-  }
-
-  .viewer-article {
-    width: $width_ipad;
-    margin: 100px 0 80px 0;
-  }
-
-  .viewer-info-container {
-    width: 600px;
-  }
-
-  .viewer-image {
-    width: 600px;
-    height: 600px;
-
-    margin: 58px 0 15px;
-  }
-}
-
-@media screen and (min-width: 1138px) {
-  .main-container {
-    align-items: center;
-
-    height: 100vh;
-    width: $width_desktop;
-  }
-
-  .viewer-article {
-    width: $width_desktop;
-    height: 720px;
-    margin: 0;
-  }
-
-  .viewer-content-container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .viewer-info-container {
-    width: 700px;
-    height: 600px;
-
-    margin-right: 58px;
-  }
-
-  .viewer-image {
-    margin: 0 0 0 58px;
-  }
+.beer-info-container {
+  width: auto;
 
   .key-value-container {
-    padding: 0 0 10px 15px;
+    display: flex;
+  }
+
+  .key-value-title {
+    align-items: center !important;
+  }
+}
+
+.product-key {
+  color: $primary-text-orange;
+}
+
+.product-smells,
+.product-tastes,
+.product-apv,
+.product-ingredients,
+.color-container {
+  margin-left: 5px;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.product-hr {
+  height: 0px;
+  width: 30px;
+  margin: 0 5px;
+}
+
+@media screen and (min-width: 320px) {}
+
+@media screen and (min-width: 732px) {}
+
+@media screen and (min-width: 1138px) {
+  .beer-image-container {
+    width: 60%;
+  }
+
+  .beer-info-container {
+    width: 40%;
   }
 }

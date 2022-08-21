@@ -8,13 +8,13 @@
 @import "mixins/color";
 
 @font-face {
-  font-family: Overpass-Regular;
-  src: url("../assets/fonts/Overpass-Regular.ttf");
+  font-family: Akidenz;
+  src: url("../assets/fonts/Akidenz-grotesk-roman.ttf");
 }
 
 @font-face {
-  font-family: Overpass-Bold;
-  src: url("../assets/fonts/Overpass-Bold.ttf");
+  font-family: Akidenz-Bold;
+  src: url("../assets/fonts/Akidenz-grotest-bold.ttf");
 }
 
 @font-face {
@@ -35,6 +35,11 @@ body {
   background-image: url('../assets/images/BACKGROUND\ HOME-100.jpg');
 
   font-family: NeutralFace-Regular, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-text-white;
 }
 
 p {
@@ -60,13 +65,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Overpass-Bold, sans-serif;
+  font-family: Akidenz, sans-serif;
   margin: 0;
 }
 
 h1 {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 4em;
+  color: $primary-text-orange;
+}
+
+hr {
+  border-color: $primary-text-white;
+}
+
+.beer-logo {
+  width: 200px;
+  margin: 1.3em 0 0 1.3em;
 }
 
 .arrow-small {
@@ -74,11 +88,22 @@ h1 {
   margin-left: 10px;
 }
 
+.arrow-medium {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.arrow-down {
+  transform: rotate(90deg);
+}
+
 .navbar-container {
   width: 100%;
 
   display: flex;
   align-items: center;
+
+  flex-direction: column;
 
   box-shadow: $shadow;
 }
@@ -182,6 +207,10 @@ h1 {
 
   .beersite-main-container {
     width: $width_ipad;
+  }
+
+  .navbar-container {
+    flex-direction: row;
   }
 
   .navbar-options {

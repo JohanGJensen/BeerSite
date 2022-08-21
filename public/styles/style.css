@@ -325,12 +325,12 @@ footer {
   }
 }
 @font-face {
-  font-family: Overpass-Regular;
-  src: url("../assets/fonts/Overpass-Regular.ttf");
+  font-family: Akidenz;
+  src: url("../assets/fonts/Akidenz-grotesk-roman.ttf");
 }
 @font-face {
-  font-family: Overpass-Bold;
-  src: url("../assets/fonts/Overpass-Bold.ttf");
+  font-family: Akidenz-Bold;
+  src: url("../assets/fonts/Akidenz-grotest-bold.ttf");
 }
 @font-face {
   font-family: NeutralFace-Regular;
@@ -375,13 +375,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Overpass-Bold, sans-serif;
+  font-family: Akidenz, sans-serif;
   margin: 0;
 }
 
 h1 {
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 4em;
+  color: #F9673D;
 }
 
 .beer-logo {
@@ -392,6 +392,15 @@ h1 {
 .arrow-small {
   width: 20px;
   margin-left: 10px;
+}
+
+.arrow-medium {
+  width: 50px;
+  margin-left: 20px;
+}
+
+.arrow-down {
+  transform: rotate(90deg);
 }
 
 .navbar-container {

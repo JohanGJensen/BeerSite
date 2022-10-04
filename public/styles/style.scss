@@ -55,8 +55,8 @@ p {
 
 .key-value-container {
   p {
-    font-family: Akzidenz-Light;
-    font-size: 1.7em;
+    font-family: Akzidenz-Light, sans-serif;
+    font-size: 2em;
   }
 }
 
@@ -87,7 +87,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 3.2em;
 }
 
 hr {
@@ -97,7 +97,7 @@ hr {
 .beer-logo {
   display: none;
   width: 200px;
-  margin: 1.3em 0 0 1.3em;
+  margin: 1.3em 0 0 40px;
 }
 
 .arrow-small {
@@ -127,7 +127,7 @@ hr {
 
 .navbar-options {
   width: 100%;
-  margin: 1.3em 1.3em 0 0;
+  margin: 1.3em 40px 0 0;
   padding: 0;
 
   display: flex;
@@ -238,11 +238,18 @@ hr {
     display: block;
   }
 
+  .main-page-container {
+    height: calc(100vh - 90px);
+    margin: 0 auto 0;
+    justify-content: center;
+  }
+
   .beersite-main-container {
     width: $width_ipad;
   }
 
   .navbar-container {
+    height: 90px;
     flex-direction: row;
   }
 
@@ -258,9 +265,18 @@ hr {
   .main-section-beers-link {
     width: 40%;
   }
+
+  .latest-beer-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .call-to-action-text {
+    font-size: 1.2em;
+  }
 }
 
-@media screen and (min-width: 1138px) {
+@media screen and (min-width: $width_desktop) {
 
   .beersite-main-container {
     width: $width_desktop;

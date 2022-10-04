@@ -1,4 +1,5 @@
 @import "mixins/color";
+@import "mixins/sizing";
 
 .beer-about-image {
   display: none;
@@ -14,4 +15,4 @@
   }
 }
 
-@media screen and (min-width: 1138px) {}
+@media screen and (min-width: $width_desktop) {}

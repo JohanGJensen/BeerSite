@@ -44,15 +44,22 @@
 .product-smells,
 .product-tastes,
 .product-apv,
-.product-ingredients,
-.color-container {
+.product-ingredients {
   margin-left: 5px;
+}
+
+.color-container {
+  margin-left: 10px;
 }
 
 .color-box {
   width: 30px;
   height: 30px;
   border-radius: 15px;
+}
+
+.key-value-color-container {
+  align-items: center;
 }
 
 .product-hr {
@@ -63,14 +70,25 @@
 
 @media screen and (min-width: 320px) {}
 
-@media screen and (min-width: 732px) {}
-
-@media screen and (min-width: 1138px) {
+@media screen and (min-width: 732px) {
   .beer-image-container {
-    width: 60%;
+    .beer-image-wrapper {
+      width: 520px;
+      height: 520px;
+
+      .viewer-image {
+        width: 600px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $width_desktop) {
+  .beer-image-container {
+    width: 50%;
   }
 
   .beer-info-container {
-    width: 40%;
+    width: 50%;
   }
 }

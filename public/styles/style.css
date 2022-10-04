@@ -98,9 +98,12 @@ footer {
 .product-smells,
 .product-tastes,
 .product-apv,
-.product-ingredients,
-.color-container {
+.product-ingredients {
   margin-left: 5px;
+}
+
+.color-container {
+  margin-left: 10px;
 }
 
 .color-box {
@@ -109,19 +112,32 @@ footer {
   border-radius: 15px;
 }
 
+.key-value-color-container {
+  align-items: center;
+}
+
 .product-hr {
   height: 0px;
   width: 30px;
   margin: 0 5px;
 }
 
-@media screen and (min-width: 1138px) {
+@media screen and (min-width: 732px) {
+  .beer-image-container .beer-image-wrapper {
+    width: 520px;
+    height: 520px;
+  }
+  .beer-image-container .beer-image-wrapper .viewer-image {
+    width: 600px;
+  }
+}
+@media screen and (min-width: 1300px) {
   .beer-image-container {
-    width: 60%;
+    width: 50%;
   }
 
   .beer-info-container {
-    width: 40%;
+    width: 50%;
   }
 }
 @font-face {
@@ -164,8 +180,8 @@ p {
 }
 
 .key-value-container p {
-  font-family: Akzidenz-Light;
-  font-size: 1.7em;
+  font-family: Akzidenz-Light, sans-serif;
+  font-size: 2em;
 }
 
 .call-to-action-text {
@@ -193,7 +209,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 3.2em;
 }
 
 hr {
@@ -203,7 +219,7 @@ hr {
 .beer-logo {
   display: none;
   width: 200px;
-  margin: 1.3em 0 0 1.3em;
+  margin: 1.3em 0 0 40px;
 }
 
 .arrow-small {
@@ -230,7 +246,7 @@ hr {
 
 .navbar-options {
   width: 100%;
-  margin: 1.3em 1.3em 0 0;
+  margin: 1.3em 40px 0 0;
   padding: 0;
   display: flex;
   justify-content: flex-end;
@@ -253,7 +269,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1138px;
+  width: 1300px;
   margin: 80px auto 0;
 }
 
@@ -320,11 +336,18 @@ hr {
     display: block;
   }
 
+  .main-page-container {
+    height: calc(100vh - 90px);
+    margin: 0 auto 0;
+    justify-content: center;
+  }
+
   .beersite-main-container {
     width: 732px;
   }
 
   .navbar-container {
+    height: 90px;
     flex-direction: row;
   }
 
@@ -340,10 +363,19 @@ hr {
   .main-section-beers-link {
     width: 40%;
   }
+
+  .latest-beer-container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .call-to-action-text {
+    font-size: 1.2em;
+  }
 }
-@media screen and (min-width: 1138px) {
+@media screen and (min-width: 1300px) {
   .beersite-main-container {
-    width: 1138px;
+    width: 1300px;
     flex-direction: row;
   }
 

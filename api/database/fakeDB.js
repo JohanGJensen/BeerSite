@@ -3,7 +3,7 @@ const fakeCollection = [
     id: "1",
     title: "Genesis",
     tags: "Tripel - Belgian Style",
-    image: "genesis_beer.jpg",
+    image: "genesis_placeholder.png",
     apv: "7.9%",
     ingredients: ["pilsner malt", "Styrian Goldings hops", "Hallertauer hops"],
     smells: ["floral", "fruity"],

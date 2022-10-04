@@ -1,3 +1,14 @@
+.beer-about-image {
+  display: none;
+}
+
+@media screen and (min-width: 732px) {
+  .beer-about-image {
+    display: block;
+    width: 100%;
+    background-size: contain;
+  }
+}
 footer {
   display: flex;
   justify-content: center;

@@ -1,7 +1,17 @@
 @import "mixins/color";
 
+.beer-about-image {
+  display: none;
+}
+
 @media screen and (min-width: 320px) {}
 
-@media screen and (min-width: 732px) {}
+@media screen and (min-width: 732px) {
+  .beer-about-image {
+    display: block;
+    width: 100%;
+    background-size: contain;
+  }
+}
 
 @media screen and (min-width: 1138px) {}

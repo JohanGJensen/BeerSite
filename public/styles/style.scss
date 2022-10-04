@@ -14,7 +14,12 @@
 
 @font-face {
   font-family: Akzidenz-Bold;
-  src: url("../assets/fonts/Akzidenz-grotest-bold.ttf");
+  src: url("../assets/fonts/AKZIDENZGROTESK-BOLDCONDALT.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Akzidenz-Light;
+  src: url("../assets/fonts/AKZIDENZGROTESK-LIGHTCOND.otf") format("opentype");
 }
 
 @font-face {
@@ -50,8 +55,8 @@ p {
 
 .key-value-container {
   p {
-    font-family: Akzidenz;
-    font-size: 1.5em;
+    font-family: Akzidenz-Light;
+    font-size: 1.7em;
   }
 }
 
@@ -72,7 +77,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Akzidenz, sans-serif;
+  font-family: Akzidenz-Light, sans-serif;
   margin: 0;
 }
 

@@ -1,104 +1,56 @@
 @import "mixins/sizing";
 @import "mixins/color";
 
-// .beers-container {
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: flex-start;
-//   flex-wrap: wrap;
+.beer-beers-container {
+  width: 90%;
+}
 
-//   min-height: 375px;
+.beers-articles-container {
+  width: 100%;
 
-//   gap: 80px;
-// }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-// .beers-h6 {
-//   color: $primary-text-grey;
-//   font-size: 26px;
-//   line-height: 26px;
-//   text-align: left;
+.beer-article {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-//   padding-bottom: 2px;
-// }
+  width: 250px;
+  height: 400px;
 
-// .beers-p {
-//   font-size: 12px;
-//   line-height: 12px;
-//   color: $primary-text-orange;
-// }
+  img {
+    width: 300px;
+    height: auto;
+    max-height: 300px;
+  }
+}
 
-// .beers-text-container {
-//   width: 300px;
-//   margin-top: 5px;
-// }
+.beers-h6 {
+  font-size: 2.5em;
+}
 
-// .beer-image {
-//   width: 300px;
-//   height: 300px;
+.beers-p {
+  display: none;
+}
 
-//   object-fit: cover;
+@media screen and (min-width: 320px) {}
 
-//   margin-top: 15px;
-// }
+@media screen and (min-width: 732px) {
+  .beer-beers-container {
+    width: 100%;
+  }
 
-// .beer-article {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
+  .beers-articles-container {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 110px;
+    row-gap: 0px;
+  }
+}
 
-//   width: 326px;
-//   height: 375px;
-//   border-radius: 5px;
-
-//   background-color: $background;
-//   box-shadow: $shadow;
-
-//   &:hover {
-//     cursor: pointer;
-//     background-color: $background-hover;
-//     transition: all ease 0.2s;
-//   }
-// }
-
-// .beers-shimmer {
-//   width: 90%;
-//   height: 90%;
-
-//   margin: 5% 0 5% 0;
-
-//   background: #f6f7f8;
-//   background-image: linear-gradient(
-//     to right,
-//     #f6f7f8 0%,
-//     #edeef1 30%,
-//     #f6f7f8 70%,
-//     #f6f7f8 100%
-//   );
-//   background-repeat: no-repeat;
-
-//   -webkit-animation-duration: 1s;
-//   -webkit-animation-fill-mode: forwards;
-//   -webkit-animation-iteration-count: infinite;
-//   -webkit-animation-name: beerArticleShimmer;
-//   -webkit-animation-timing-function: linear;
-// }
-
-// .shimmer-big {
-//   width: 90%;
-//   height: 55%;
-// }
-
-// .shimmer-small {
-//   width: 90%;
-//   height: 30%;
-// }
-
-// @-webkit-keyframes beerArticleShimmer {
-//   0% {
-//     background-position: -500px 0;
-//   }
-
-//   100% {
-//     background-position: 500px 0;
-//   }
-// }
+@media screen and (min-width: $width_desktop) {}

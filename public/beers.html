@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/images/beer-icon.png" />
+  <link rel="stylesheet" href="styles/style.css" type="text/css" />
+  <title>Homebrew - Beers</title>
+</head>
+
+<body>
+  <nav class="navbar-container">
+    <a href="/"><img class="beer-logo" src="assets/images/LOGO.png" alt="beer logo"></a>
+    <ul class="navbar-options">
+      <li><a class="navbar-option" href="/">HOME</a></li>
+      <li><a class="navbar-option navbar-option-selected" href="/beers">BEERS</a></li>
+      <li><a class="navbar-option" href="/about">ABOUT</a></li>
+    </ul>
+  </nav>
+  <main class="beersite-main-container">
+    <section class="beer-beers-container" style="margin-bottom: 100px;">
+      <h1 class="margin-bottom">BEERS<span style="color: #ECDFC7;">:</span></h1>
+      <div id="articles-parent" class="beers-articles-container">
+
+        <article class="beer-article">
+          <img src="./assets/images/product_placeholder.png" alt="a beer" />
+          <h6 class="beers-h6">a beer</h6>
+        </article>
+        <article class="beer-article">
+          <img src="./assets/images/product_placeholder.png" alt="a beer" />
+          <h6 class="beers-h6">a beer</h6>
+        </article>
+        <article class="beer-article">
+          <img src="./assets/images/product_placeholder.png" alt="a beer" />
+          <h6 class="beers-h6">a beer</h6>
+        </article>
+
+        <article class="beer-article">
+          <img src="./assets/images/product_placeholder.png" alt="a beer" />
+          <h6 class="beers-h6">a beer</h6>
+        </article>
+        <article class="beer-article">
+          <img src="./assets/images/product_placeholder.png" alt="a beer" />
+          <h6 class="beers-h6">a beer</h6>
+        </article>
+        <article class="beer-article">
+          <img src="./assets/images/product_placeholder.png" alt="a beer" />
+          <h6 class="beers-h6">a beer</h6>
+        </article>
+
+      </div>
+
+    </section>
+  </main>
+</body>
+<script src="js/index.js"></script>
+<script src="js/API.js"></script>
+<script>
+  buildArticles();
+</script>
+
+</html>

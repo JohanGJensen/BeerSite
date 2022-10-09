@@ -54,6 +54,9 @@ const getPageHtml = (url) => {
     case "/about":
       page = "/about.html";
       break;
+    case "/beers":
+      page = "/beers.html";
+      break;
   }
 
   console.log(page);

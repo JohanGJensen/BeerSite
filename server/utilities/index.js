@@ -51,6 +51,9 @@ const getPageHtml = (url) => {
     case "/viewer":
       page = "/viewer.html";
       break;
+    case "/about":
+      page = "/about.html";
+      break;
   }
 
   console.log(page);
